@@ -1,0 +1,25 @@
+body {
+    background-image: url("../images/galaxy.jpg");
+    background-color: purple;
+}
+
+.gameTitle {
+    color:blue;
+    font-family: 'Permanent Marker', cursive;
+    text-align: center;
+}
+
+.container {
+    border-style: solid;
+    height:100vh;
+    background-color:lightpink;
+}
+
+.btn {
+    text-align: center;
+
+}
+
+.mt-0 {
+    margin-top: 0 !important;
+  }
