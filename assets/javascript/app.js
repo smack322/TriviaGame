@@ -2,9 +2,9 @@ console.log("connected");
 //define global varibles
 var gameTimer = 120;
 var intervalId;
-var correctAnswerText = 0;
-var incorrectAnswerText = 0;
-var unasweredQuestionText = 0;
+var correctCounter = 0;
+var incorrectCounter = 0;
+var unasweredCounter = 0;
 
 // create objects to store questions and answers 
 var scoobyQA = {
@@ -73,6 +73,7 @@ $("#start").on("click", function() {
     $(this).hide();
     displayQuestions();
     createDoneButton ();
+    displayResults();
 
 });
     // function to clear the timer and to set it to go down by 1 second at a time
@@ -102,24 +103,24 @@ $("#start").on("click", function() {
      function displayQuestions () {
      $("#scoobyQ").append(scoobyQA.question);
      $("#scoobyA").append(scoobyQA.answers);
-     $("#scoobyQ").text(bojackQA.question);
-     $("#scoobyA").text(bojackQA.answers);
-     $("#scoobyQ").text(thronesQA.question);
-     $("#scoobyA").text(bojackQA.answers);
-     $("#scoobyQ").text(rickQA.question);
-     $("#scoobyA").text(rickQA.answers);
-     $("#scoobyQ").text(chrisQA.question);
-     $("#scoobyA").text(chrisQA.answers);
-     $("#scoobyQ").text(disneyQA.question);
-     $("#scoobyA").text(disneyQA.answers);
-     $("#scoobyQ").text(madMenQA.question);
-     $("#scoobyA").text(madMenQA.answers);
-     $("#scoobyQ").text(breakingQA.question);
-     $("#scoobyA").text(breakingQA.answers);
-     $("#scoobyQ").text(strangerQA.question);
-     $("#scoobyA").text(strangerQA.answers);
-     $("#scoobyQ").text(friendsQA.question);
-     $("#scoobyA").text(friendsQA.answers);
+     $("#bojackQ").text(bojackQA.question);
+     $("#bojackA").text(bojackQA.answers);
+     $("#thronesQ").text(thronesQA.question);
+     $("#thronesA").text(bojackQA.answers);
+     $("#rickQ").text(rickQA.question);
+     $("#rickA").text(rickQA.answers);
+     $("#chrisQ").text(chrisQA.question);
+     $("#chrisA").text(chrisQA.answers);
+     $("#disneyQ").text(disneyQA.question);
+     $("#disneyA").text(disneyQA.answers);
+     $("#madMenQ").text(madMenQA.question);
+     $("#madMenA").text(madMenQA.answers);
+     $("#breakingQ").text(breakingQA.question);
+     $("#breakingA").text(breakingQA.answers);
+     $("#strangerQ").text(strangerQA.question);
+     $("#strangerA").text(strangerQA.answers);
+     $("#friendsQ").text(friendsQA.question);
+     $("#friendsA").text(friendsQA.answers);
      }
     //  displayQuestions();
      
@@ -131,7 +132,20 @@ $("#start").on("click", function() {
         //create button to submit answers
        var button = $("<button></button>").text("Done");
        $("#doneButton").append(button);
-     }
- 
 
+    };
 
+    displayResults = function () {
+        $("#doneButton").on("click", function() {
+            correctCounter = document.getElementById("#correctAnswer");
+            incorrectCounter = document.getElementById("#incorrectAnswer");
+            unasweredCounter = document.getElementById("#unanswered");
+    
+            correctCounter.textContent = "Correct Answers: " + correctCounter;
+            incorrectCounter.textContent = "Incorrect Answers: " + incorrectCounter;
+            unasweredCounter.textContent = "Unanswered Questions: " + unasweredCounter;
+         })
+    }
+
+    
+    
