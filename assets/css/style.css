@@ -1,9 +1,8 @@
 body {
     background-image: url("../images/galaxy.jpg");
-    background-color: purple;
 }
 
-.gameTitle {
+#gameTitle {
     color:blue;
     font-family: 'Permanent Marker', cursive;
     text-align: center;
@@ -15,11 +14,7 @@ body {
     background-color:lightpink;
 }
 
-.btn {
-    text-align: center;
+#start {
+    color: black;
 
 }
-
-.mt-0 {
-    margin-top: 0 !important;
-  }
