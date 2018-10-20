@@ -1,5 +1,5 @@
 body {
-    background-image: url("../images/galaxy.jpg");
+    /* background-image: url("../images/galaxy.jpg"); */
 }
 
 #gameTitle {
@@ -10,7 +10,7 @@ body {
 
 .container {
     border-style: solid;
-    height:100vh;
+    height:100%;
     background-color:lightpink;
 }
 
